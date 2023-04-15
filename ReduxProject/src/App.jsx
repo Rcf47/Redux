@@ -3,7 +3,10 @@ import './App.css'
 
 function App() {
   return (
-    <div>Hello</div>
+    <div className='button__wrapper' >
+      <button className='button'>Add cash</button>
+      <button className='button'>Get cash</button>
+    </div>
   )
 }
 

@@ -1,0 +1,27 @@
+:root {
+  --background-button: #B8AEE9;
+  --button-color: #ffffff;
+}
+
+
+  
+
+.button {
+  background-color: var(--background-button);
+  color: var(--button-color);
+  height: 100px;
+}
+
+.button__wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template: 100px / 200px 200px;
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
