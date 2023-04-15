@@ -10,6 +10,7 @@
   background-color: var(--background-button);
   color: var(--button-color);
   height: 100px;
+  border-radius: 10px;
 }
 
 .button__wrapper {
