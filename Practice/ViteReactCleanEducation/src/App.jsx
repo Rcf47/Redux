@@ -16,9 +16,9 @@ function App() {
   }
 
   return (
-    <div>
-      <div>{cash}</div>
-      <button onClick={() => addCash(Number(prompt()))}>Add cash</button>
+    <div className='grid justify-center content-center grid-cols-2 gap-2'>
+      <div className='col-span-2'>{cash}</div>
+      <button className='container xl: w-48 h-20' onClick={() => addCash(Number(prompt()))}>Add cash</button>
       <button onClick={() => getCash(Number(prompt()))}>Get cash</button>
     </div>
   )
