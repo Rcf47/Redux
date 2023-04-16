@@ -20,9 +20,15 @@
   top: 0;
   left: 0;
   display: grid;
-  grid-template: 100px / 200px 200px;
+  grid-template: 100px 100px / 200px 200px;
   grid-gap: 30px;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+.button__info {
+  grid-column: 1/-1;
+  margin: auto;
+  font-size: 3rem;
 }
