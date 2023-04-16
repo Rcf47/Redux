@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { nanoid } from "nanoid";
+//import { addCustomerAction } from "./store/customerReducer";
+
 
 function App() {
   const dispatch = useDispatch();

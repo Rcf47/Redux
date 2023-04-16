@@ -8,6 +8,6 @@ const rootReducer = combineReducers({
   customers: customerReducer,
 })
 
-const store = createStore(rootReducer, composeWithDevTools())
+const store = createStore(rootReducer, composeWithDevTools)
 
 export default store
