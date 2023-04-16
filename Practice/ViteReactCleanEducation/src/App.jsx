@@ -20,6 +20,10 @@ function App() {
     dispatch({ type: "ADD_CUSTOMER", payload: customer })
   }
 
+  const removeCustomer = (customer) => {
+    dispatch({ type: "REMOVE_CUSTOMER", payload: customer.id })
+  }
+
   return (
     <div className="grid justify-center content-center items-center grid-cols-[200px_200px] grid-rows-[100px_100px] gap-2 h-full w-full fixed">
       <div className="col-span-2 text-4xl m-auto">{cash}</div>
@@ -50,7 +54,7 @@ function App() {
       {customers.length > 0 ? (
         <div className="text-4xl mt-4 col-span-2 m-auto">
           {customers.map((customer) => (
-            <div key={nanoid()}>{customer.name}</div>
+            <div key={nanoid()} onClick={() => removeCustomer(customer)}>{customer.name}</div>
           ))}
         </div>
       ) : (
