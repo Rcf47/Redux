@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { nanoid } from "nanoid";
 
 function App() {
   const dispatch = useDispatch();
@@ -11,8 +12,12 @@ function App() {
   const getCash = () => {
     dispatch({ type: "GET_CASH", payload: cash });
   };
-  const addCustomer = () => {
-    dispatch({ type: "ADD_CUSTOMER", payload: "Vadim" })
+  const addCustomer = (name) => {
+    const customer = {
+      id: nanoid(),
+      name,
+    }
+    dispatch({ type: "ADD_CUSTOMER", payload: customer })
   }
 
   return (
@@ -32,7 +37,7 @@ function App() {
       </button>
       <button
         className="w-48 h-20 bg-cyan-500 border-2 border-solid text-white rounded-lg"
-        onClick={() => addCustomer()}
+        onClick={() => addCustomer(prompt())}
       >
         Add customer
       </button>
@@ -43,9 +48,9 @@ function App() {
         Delete customer
       </button>
       {customers.length > 0 ? (
-        <div>
+        <div className="text-4xl mt-4 col-span-2 m-auto">
           {customers.map((customer) => (
-            <div>{customer.name}</div>
+            <div key={nanoid()}>{customer.name}</div>
           ))}
         </div>
       ) : (
