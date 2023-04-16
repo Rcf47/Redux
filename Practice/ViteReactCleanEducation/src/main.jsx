@@ -6,7 +6,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 const defaultState = {
-  cash: 0,
+  cash: 5,
 }
 
 const reducer = (state = defaultState, action) => {
@@ -14,7 +14,7 @@ const reducer = (state = defaultState, action) => {
     case "ADD_CASH":
       return { ...state, cash: state.cash + action.payload }
     case "GET_CASH":
-      return { ...state, cash: state.cash - active.payload }
+      return { ...state, cash: state.cash - action.payload }
 
     default:
       return state;
