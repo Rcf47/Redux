@@ -1,6 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux'
-import './App.css'
-import { useState } from "react"
 
 
 function App() {
@@ -18,7 +16,7 @@ function App() {
   return (
     <div className='grid justify-center content-center grid-cols-2 gap-2'>
       <div className='col-span-2'>{cash}</div>
-      <button className='container xl: w-48 h-20' onClick={() => addCash(Number(prompt()))}>Add cash</button>
+      <button className='w-48 h-20 bg-cyan-500 border-2 border-solid text-indigo-600' onClick={() => addCash(Number(prompt()))}>Add cash</button>
       <button onClick={() => getCash(Number(prompt()))}>Get cash</button>
     </div>
   )
