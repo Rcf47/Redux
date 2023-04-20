@@ -7,9 +7,9 @@ const REMOVE_CUSTOMER = "REMOVE_CUSTOMER";
 
 const customerReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case ADD_CUSTOMER:
+    case "ADD_CUSTOMER":
       return { ...state, customers: [...state.customers, action.payload] };
-    case REMOVE_CUSTOMER:
+    case "REMOVE_CUSTOMER":
       return {
         ...state,
         customers: state.customers.filter(
@@ -27,4 +27,4 @@ const removeCustomerAction = (payload) => ({
   payload,
 });
 
-export default customerReducer;
+export default customerReducer
